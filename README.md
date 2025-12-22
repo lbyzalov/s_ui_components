@@ -1,2 +1,2 @@
-# sirion_ui_components
-UI components for Sirion
+# s_ui_components
+UI components for private use
