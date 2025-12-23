@@ -66,11 +66,11 @@
 
     window.addEventListener("message", (event) => {
       // 🔒 SECURITY CHECK
-      if (event.origin !== "agentOS") return;
+      if (event.origin !== "agentos") return;
 
       const { type, payload } = event.data || {};
 
-      if (type === "RENDER_TABLE") {
+      if (type === "ui_component_render") {
         const container = document.getElementById("container");
         container.innerHTML = renderTable(payload);
       }
