@@ -65,6 +65,7 @@
     }
 
     window.addEventListener("message", (event) => {
+      print("Received message:", event);
       // 🔒 SECURITY CHECK
       if (event.origin !== "agentos") {
         print("Blocked message from unknown origin:", event.origin);
