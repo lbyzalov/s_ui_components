@@ -20,16 +20,16 @@ function renderTable({ columns, rows }) {
     const thead = `
     <thead>
         <tr>
-        ${columns.map(c => `<th>${escapeHtml(c)}</th>`).join("")}
+        ${columns?.map(c => `<th>${escapeHtml(c)}</th>`).join("")}
         </tr>
     </thead>
     `;
 
     const tbody = `
     <tbody>
-        ${rows.map(row => `
+        ${rows?.map(row => `
         <tr>
-            ${columns.map(c => `<td>${escapeHtml(row[c])}</td>`).join("")}
+            ${columns?.map(c => `<td>${escapeHtml(row[c])}</td>`).join("")}
         </tr>
         `).join("")}
     </tbody>
