@@ -7,6 +7,7 @@ made by Lev Byzalov
 const VALID_ORIGIN = "https://test.automation.sirioninc.net";
 const EVENT_TYPE_RENDER = "ui_component_render";
 
+// function to escape html special characters
 function escapeHtml(value) {
     return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -16,11 +17,16 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-function renderTable({ columns, rows }) {
+// function to render html table from payload
+function renderTable(payload) {
+    // extracts columns and rows from payload
+    const columns = payload.columns;
+    const rows = payload.rows;
+
     const thead = `
     <thead>
         <tr>
-        ${columns?.map(c => `<th>${escapeHtml(c)}</th>`).join("")}
+        ${columns?.map(c => `<th>${escapeHtml(c.label)}</th>`).join("")}
         </tr>
     </thead>
     `;
@@ -29,7 +35,7 @@ function renderTable({ columns, rows }) {
     <tbody>
         ${rows?.map(row => `
         <tr>
-            ${columns?.map(c => `<td>${escapeHtml(row[c])}</td>`).join("")}
+            ${columns?.map(c => `<td>${escapeHtml(row?.[c.id])}</td>`).join("")}
         </tr>
         `).join("")}
     </tbody>
@@ -38,6 +44,7 @@ function renderTable({ columns, rows }) {
     return `<table>${thead}${tbody}</table>`;
 }
 
+// event listener for message events
 window.addEventListener("message", (event) => {
     console.log("Received message:", event);
     /* security: check for valid origin */
