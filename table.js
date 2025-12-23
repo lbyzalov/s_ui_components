@@ -39,10 +39,10 @@ function renderTable({ columns, rows }) {
 }
 
 window.addEventListener("message", (event) => {
-    print("Received message:", event);
+    console.log("Received message:", event);
     /* security: check for valid origin */
     if (event.origin !== VALID_ORIGIN) {
-    print("Blocked message from unknown origin:", event.origin);
+    console.log("Blocked message from unknown origin:", event.origin);
     return;
     } 
 
