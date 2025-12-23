@@ -4,7 +4,7 @@ made by Lev Byzalov
 */
 
 // const declarations: origin, event type
-const VALID_ORIGIN = "agentos";
+const VALID_ORIGIN = "https://test.automation.sirioninc.net";
 const EVENT_TYPE_RENDER = "ui_component_render";
 
 function escapeHtml(value) {
