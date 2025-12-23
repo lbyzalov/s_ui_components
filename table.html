@@ -32,53 +32,6 @@
     <em>Waiting for data…</em>
   </div>
 
-  <script>
-    function escapeHtml(value) {
-      return String(value ?? "")
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    function renderTable({ columns, rows }) {
-      const thead = `
-        <thead>
-          <tr>
-            ${columns.map(c => `<th>${escapeHtml(c)}</th>`).join("")}
-          </tr>
-        </thead>
-      `;
-
-      const tbody = `
-        <tbody>
-          ${rows.map(row => `
-            <tr>
-              ${columns.map(c => `<td>${escapeHtml(row[c])}</td>`).join("")}
-            </tr>
-          `).join("")}
-        </tbody>
-      `;
-
-      return `<table>${thead}${tbody}</table>`;
-    }
-
-    window.addEventListener("message", (event) => {
-      print("Received message:", event);
-      /* security: check for valid origin */
-      if (event.origin !== "agentos") {
-        print("Blocked message from unknown origin:", event.origin);
-        return;
-      } 
-
-      const { type, payload } = event.data || {};
-
-      if (type === "ui_component_render") {
-        const container = document.getElementById("container");
-        container.innerHTML = renderTable(payload);
-      }
-    });
-  </script>
+  <script src="table.js"></script>
 </body>
 </html>
