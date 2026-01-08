@@ -2,7 +2,6 @@ table {
     border-bottom: 1px solid #0D5E68;
     border-collapse: collapse;
     padding: 5px;
-    table-layout: auto;
     font: 14px Arial, sans-serif;
 }
 th {
