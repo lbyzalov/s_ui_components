@@ -54,6 +54,28 @@ function renderTable(payload) {
     return `${style}<table>${thead}${tbody}</table>`;
 }
 
+// function to send message to parent window
+function sendMessageToParent(message, llmMessage) {
+    window.parent.postMessage(
+      {
+        type: "ui_component_user_message",
+        message: message,
+        llmMessage: llmMessage
+      },
+      "*" // replace with parent origin for production security
+    );
+  }
+
+// event listener for button clicks
+window.addEventListener("click", (event) => {
+    if (event.target.tagName === "BUTTON") {
+        const cell = event.target.closest("th");
+        const column_name = cell.innerText.trim();
+        const message = `Regenerate data for column: ${column_name}`;
+        const llmMessage = JSON.stringify({ action: "regenerate_column", column: column_name });
+        sendMessageToParent(message, llmMessage);
+    }
+});
 // event listener for message events
 window.addEventListener("message", (event) => {
     console.log("Received message:", event);
