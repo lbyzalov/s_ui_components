@@ -5,6 +5,7 @@ table {
     font: 14px Arial, sans-serif;
 }
 th {
+    background-color: #0D5E68;
     color: white;
     font-weight: bold;
     text-align: center;
