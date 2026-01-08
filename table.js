@@ -29,6 +29,7 @@ function renderTable(payload) {
         width: auto;
         table-layout: auto;
     }
+    </style>
 
     <thead>
         <tr>
