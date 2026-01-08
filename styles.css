@@ -2,7 +2,6 @@ table {
     border-bottom: 1px solid #0D5E68;
     border-collapse: collapse;
     padding: 5px;
-    width: auto;
     table-layout: auto;
     font: 14px Arial, sans-serif;
 }
@@ -13,12 +12,14 @@ th {
     text-align: center;
     vertical-align: bottom;
     font: 14px Arial, sans-serif;
+    padding: 5px;
 }
 td {
     border-bottom: 1px solid #0D5E68;
     background-color: #F5F6F6;
     color: #333333;
     font: 14px Arial, sans-serif;
+    padding: 5px;
 }
 button {
     margin-top: 5px;
