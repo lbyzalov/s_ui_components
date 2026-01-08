@@ -24,6 +24,12 @@ function renderTable(payload) {
     const rows = payload.rows;
 
     const thead = `
+    <style>
+    table, th, td {
+        width: auto;
+        table-layout: auto;
+    }
+
     <thead>
         <tr>
         ${columns?.map(c => `<th>${escapeHtml(c.label)}<button type="button">Regenerate</button></th>`).join("")}
