@@ -26,7 +26,7 @@ function renderTable(payload) {
     const thead = `
     <thead>
         <tr>
-        ${columns?.map(c => `<th>${escapeHtml(c.label)}</th>`).join("")}
+        ${columns?.map(c => `<th>${escapeHtml(c.label)}<button type="button">Regenerate</button></th>`).join("")}
         </tr>
     </thead>
     `;
