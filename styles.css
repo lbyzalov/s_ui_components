@@ -1,5 +1,5 @@
 table {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #0B1821;
     border-collapse: collapse;
     padding: 5px;
     width: auto;
@@ -7,13 +7,15 @@ table {
     font: 14px Arial, sans-serif;
 }
 th {
-    background-color: #0B1821;
+    background-color: #0D5E68;
     color: white;
     font-weight: bold;
     text-align: center;
+    vertical-align: bottom;
     font: 14px Arial, sans-serif;
 }
 td {
+    border-bottom: 1px solid #0B1821;
     background-color: #F5F6F6;
     color: #333333;
     font: 14px Arial, sans-serif;
