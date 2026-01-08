@@ -43,6 +43,16 @@ function renderTable(payload) {
         background-color: #F5F6F6;
         color: #333333;
     }
+    button {
+        margin-top: 5px;
+        padding: 5px 10px;
+        font-size: 12px;
+        cursor: pointer;
+        color: #333333;
+        background-color: #F5F6F6;
+        border: none;
+        border-radius: 3px;
+    }
     </style>
     `;
 
