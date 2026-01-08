@@ -23,13 +23,16 @@ function renderTable(payload) {
     const columns = payload.columns;
     const rows = payload.rows;
 
-    const thead = `
+    const style = `
     <style>
     table, th, td {
         width: auto;
         table-layout: auto;
     }
     </style>
+    `;
+
+    const thead = `
 
     <thead>
         <tr>
@@ -48,7 +51,7 @@ function renderTable(payload) {
     </tbody>
     `;
 
-    return `<table>${thead}${tbody}</table>`;
+    return `${style}<table>${thead}${tbody}</table>`;
 }
 
 // event listener for message events
