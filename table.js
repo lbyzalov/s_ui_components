@@ -26,8 +26,22 @@ function renderTable(payload) {
     const style = `
     <style>
     table, th, td {
+        border-bottom: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
         width: auto;
         table-layout: auto;
+        font: 14px Arial, sans-serif;
+    }
+    th {
+        background-color: #0B1821;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+    td {
+        background-color: #F5F6F6;
+        color: #333333;
     }
     </style>
     `;
@@ -36,7 +50,7 @@ function renderTable(payload) {
 
     <thead>
         <tr>
-        ${columns?.map(c => `<th>${escapeHtml(c.label)}<button type="button">Regenerate</button></th>`).join("")}
+        ${columns?.map(c => `<th>${escapeHtml(c.label)}<br><button type="button">Regenerate</button></th>`).join("")}
         </tr>
     </thead>
     `;
