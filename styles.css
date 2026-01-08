@@ -1,5 +1,5 @@
 table {
-    border-bottom: 1px solid #0B1821;
+    border-bottom: 1px solid #0D5E68;
     border-collapse: collapse;
     padding: 5px;
     width: auto;
@@ -15,7 +15,7 @@ th {
     font: 14px Arial, sans-serif;
 }
 td {
-    border-bottom: 1px solid #0B1821;
+    border-bottom: 1px solid #0D5E68;
     background-color: #F5F6F6;
     color: #333333;
     font: 14px Arial, sans-serif;

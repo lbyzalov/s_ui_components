@@ -24,10 +24,9 @@ function renderTable(payload) {
     const rows = payload.rows;
 
     const thead = `
-
     <thead>
         <tr>
-        ${columns?.map(c => `<th>${escapeHtml(c.label)}<br><button type="button">Regenerate</button></th>`).join("")}
+        ${columns?.map(c => `<th style="width: ${c.width || 'auto'}">${escapeHtml(c.label)}<br><button type="button">Regenerate</button></th>`).join("")}
         </tr>
     </thead>
     `;
