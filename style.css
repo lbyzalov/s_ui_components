@@ -1,0 +1,30 @@
+table {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    width: auto;
+    table-layout: auto;
+    font: 14px Arial, sans-serif;
+}
+th {
+    background-color: #0B1821;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font: 14px Arial, sans-serif;
+}
+td {
+    background-color: #F5F6F6;
+    color: #333333;
+    font: 14px Arial, sans-serif;
+}
+button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font: 14px Arial, sans-serif;
+    cursor: pointer;
+    color: #333333;
+    background-color: #F5F6F6;
+    border: none;
+    border-radius: 3px;
+}
