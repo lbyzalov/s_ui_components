@@ -70,7 +70,7 @@ function sendMessageToParent(message, llmMessage) {
 window.addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON") {
         const cell = event.target.closest("th");
-        const column_name = cell.innerText.trim();
+        const column_name = cell.innerText.trim().slice(0,-"Regenerate".length).trim();
         const message = `Regenerate data for column: ${column_name}`;
         const llmMessage = JSON.stringify({ action: "regenerate_column", column: column_name });
         sendMessageToParent(message, llmMessage);
