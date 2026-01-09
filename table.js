@@ -26,7 +26,7 @@ function renderTable(payload) {
     const thead = `
     <thead>
         <tr>
-        ${columns?.map(c => `<th style="width: ${c.width || 'auto'}">${escapeHtml(c.label)}<br><button type="button">Regenerate</button></th>`).join("")}
+        ${columns?.map(c => `<th style="min-width: ${c.width || 'auto'}">${escapeHtml(c.label)}<br><button type="button">Regenerate</button></th>`).join("")}
         </tr>
     </thead>
     `;
@@ -35,7 +35,7 @@ function renderTable(payload) {
     <tbody>
         ${rows?.map(row => `
         <tr>
-            ${columns?.map(c => `<td style="width: ${c.width || 'auto'}">${escapeHtml(row?.[c.id])}</td>`).join("")}
+            ${columns?.map(c => `<td style="min-width: ${c.width || 'auto'}">${escapeHtml(row?.[c.id])}</td>`).join("")}
         </tr>
         `).join("")}
     </tbody>
