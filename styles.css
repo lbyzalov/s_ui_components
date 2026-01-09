@@ -1,3 +1,6 @@
+#container {
+  overflow-x: auto;
+}
 table {
     table-layout: fixed;
     border-bottom: 1px solid #0D5E68;
